@@ -27,6 +27,11 @@ public class CustomerRestController {
 	}
 	
 	@GetMapping("/wlcome")
+	public String getotp() {
+		return "Welocme SSD Ecom App";
+	}
+	
+	@GetMapping("/wlcome")
 	public String getWelcomeMsgs() {
 		return "Welocme SSD Ecom App";
 	}
