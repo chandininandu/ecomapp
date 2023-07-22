@@ -23,7 +23,7 @@ public class CustomerRestController {
 	
 	@GetMapping("/wlcome")
 	public String getWelcomeMsg() {
-		return "Welocme to spring";
+		return "Welocme to spring boot";
 	}
 	@PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(@RequestBody  Customer customer){
