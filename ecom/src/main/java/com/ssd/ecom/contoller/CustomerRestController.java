@@ -25,6 +25,11 @@ public class CustomerRestController {
 	public String getWelcomeMsg() {
 		return "Welocme SSD Ecom App";
 	}
+	
+	@GetMapping("/wlcome")
+	public String getWelcomeMsgs() {
+		return "Welocme SSD Ecom App";
+	}
 	@PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(@RequestBody  Customer customer){
     	Customer cust = customerService.createCustomer(customer);
