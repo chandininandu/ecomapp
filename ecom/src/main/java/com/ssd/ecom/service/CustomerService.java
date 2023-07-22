@@ -22,5 +22,10 @@ public class CustomerService {
 		
 		return customerRepository.findAll();
 	}
+	
+	public Customer getCustomer(Long id){
+		
+		return customerRepository.findById(id).get();
+	}
 
 }
