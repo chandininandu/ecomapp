@@ -31,6 +31,11 @@ public class CustomerRestController {
 		return "202020";
 	}
 	
+	@GetMapping("/sms")
+	public String getSms() {
+		return "Hi";
+	}
+	
 	@PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(@RequestBody  Customer customer){
     	Customer cust = customerService.createCustomer(customer);
