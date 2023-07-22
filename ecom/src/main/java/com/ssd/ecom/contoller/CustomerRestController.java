@@ -23,7 +23,7 @@ public class CustomerRestController {
 	
 	@GetMapping("/wlcome")
 	public String getWelcomeMsg() {
-		return "Welocme SSD Ecom App";
+		return "Welocme to spring";
 	}
 	@PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(@RequestBody  Customer customer){
@@ -36,7 +36,7 @@ public class CustomerRestController {
 	@GetMapping("/customers")
     public ResponseEntity<List<Customer>> getAllCustomers(){
     	List<Customer> custList = customerService.getAllCustomers();
-    	
+    	System.out.println(custList);
     	return new ResponseEntity<List<Customer>>(custList,HttpStatus.OK);
     }
 }
