@@ -32,6 +32,22 @@ public class CustomerRestController {
 		return "Welocme SSD Ecom App";
 	}
 	
+	@GetMapping("/wlcome")
+	public String sendotp() {
+		return "Welocme SSD Ecom App";
+	}
+	
+	
+	@GetMapping("/wlcome")
+	public String sendotpp() {
+		return "Welocme SSD Ecom App";
+	}
+
+	@GetMapping("/wlcome")
+	public String sendotpp1() {
+		return "Welocme SSD Ecom App";
+	}
+	
 	
 	
 	@GetMapping("/wlcome")
