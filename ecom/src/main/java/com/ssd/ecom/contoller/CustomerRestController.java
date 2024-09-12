@@ -15,13 +15,13 @@ import com.ssd.ecom.model.Customer;
 import com.ssd.ecom.service.CustomerService;
 
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 public class CustomerRestController {
 	
 	@Autowired
 	private CustomerService  customerService;
 	
-	@GetMapping("/wlcome")
+	@GetMapping("/welcome")
 	public String getWelcomeMsg() {
 		return "Welocme SSD Ecom App";
 	}
