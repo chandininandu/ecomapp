@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ public class CustomerRestController {
 	
 	@GetMapping("/wlcome")
 	public String getWelcomeMsg() {
-		return "Welocme SSD Ecom App";
+		return "Welocme SSD Ecom ";
 	}
 	@PostMapping("/create")
     public ResponseEntity<Customer> createCustomer(@RequestBody  Customer customer){
@@ -41,7 +42,7 @@ public class CustomerRestController {
     }
 
 		@GetMapping("/customers/{id}")
-    public ResponseEntity<List<Customer>> getCustomer(@pathvariable Long id){
+    public ResponseEntity<List<Customer>> getCustomer(@PathVariable Long id){
     	List<Customer> custList = customerService.getAllCustomers();
     	
     	return new ResponseEntity<List<Customer>>(custList,HttpStatus.OK);
