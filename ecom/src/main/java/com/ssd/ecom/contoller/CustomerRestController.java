@@ -50,4 +50,11 @@ public class CustomerRestController {
     	
     	return new ResponseEntity<List<Customer>>(custList,HttpStatus.OK);
     }
+
+		@GetMapping("/customers/{id}")
+    public ResponseEntity<List<Customer>> getCustomer(@pathvariable Long id){
+    	List<Customer> custList = customerService.getAllCustomers();
+    	
+    	return new ResponseEntity<List<Customer>>(custList,HttpStatus.OK);
+    }
 }
